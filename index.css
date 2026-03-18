@@ -1,0 +1,389 @@
+const services = [
+  {
+    title: 'Site Vitrine',
+    description:
+      'Un site signature pensé pour raconter votre univers, valoriser vos prestations et convertir les visites en rendez-vous.',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <rect x="3.5" y="5" width="17" height="14" rx="2" />
+        <path d="M7 9h10M7 13h6" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Réservation en Ligne',
+    description:
+      'Intégrez un parcours fluide pour réserver un soin, une coupe ou une consultation en quelques clics, sur mobile comme desktop.',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <rect x="4" y="5" width="16" height="15" rx="2" />
+        <path d="M8 3.5v4M16 3.5v4M4 10.5h16M8 14h3M13 14h3" />
+      </svg>
+    ),
+  },
+  {
+    title: 'SEO Local',
+    description:
+      'Dominez les recherches locales et captez les clientes qui cherchent un salon ou un institut près de chez elles.',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <circle cx="11" cy="11" r="6.5" />
+        <path d="M20 20l-4.2-4.2M11 8.5v5M8.5 11H13.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Boutique en Ligne',
+    description:
+      'Vendez vos produits capillaires, cosmétiques ou cartes cadeaux dans un écrin digital aligné à votre image.',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M6 8.5h12l-1 10H7l-1-10Z" />
+        <path d="M9 9V7.5a3 3 0 1 1 6 0V9" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Galerie & Portfolio',
+    description:
+      'Exposez vos réalisations, votre expertise couleur, vos soins signature et l’atmosphère de votre établissement.',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <rect x="3.5" y="5" width="17" height="14" rx="2" />
+        <path d="m7 15 3-3 3 2 4-4 2 2" />
+        <circle cx="9" cy="9" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Maintenance & Support',
+    description:
+      'Nous assurons les mises à jour, les performances, la sécurité et l’évolution continue de votre présence en ligne.',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M12 3.5v4M12 16.5v4M4.9 6.9l2.8 2.8M16.3 14.3l2.8 2.8M3.5 12h4M16.5 12h4M4.9 17.1l2.8-2.8M16.3 9.7l2.8-2.8" />
+        <circle cx="12" cy="12" r="3.2" />
+      </svg>
+    ),
+  },
+]
+
+const portfolio = [
+  {
+    name: 'Élara Paris',
+    type: 'Salon de coiffure premium',
+    tags: ['Editorial', 'Réservation', 'Luxe'],
+    mockupClass: 'mockup-elara',
+  },
+  {
+    name: 'Zenta Spa & Beauté',
+    type: 'Institut de beauté & spa',
+    tags: ['Zen', 'Rituels', 'Conversion'],
+    mockupClass: 'mockup-zenta',
+  },
+  {
+    name: 'ONYX Barbershop',
+    type: 'Barbershop contemporain',
+    tags: ['Urbain', 'Premium', 'Branding'],
+    mockupClass: 'mockup-onyx',
+  },
+]
+
+const steps = [
+  {
+    number: '01 —',
+    title: 'Découverte',
+    description:
+      'Audit de votre positionnement, de votre clientèle et de vos objectifs business pour bâtir une stratégie digitale précise.',
+  },
+  {
+    number: '02 —',
+    title: 'Design',
+    description:
+      'Direction artistique, maquettes premium et parcours utilisateur conçus pour refléter l’élégance de votre marque.',
+  },
+  {
+    number: '03 —',
+    title: 'Développement',
+    description:
+      'Intégration rapide, animations soignées, SEO technique et performances optimisées sur tous les écrans.',
+  },
+  {
+    number: '04 —',
+    title: 'Lancement',
+    description:
+      'Mise en ligne, suivi, analytics et accompagnement pour transformer votre site en véritable levier de croissance.',
+  },
+]
+
+function LuxoriaMark() {
+  return (
+    <svg viewBox="0 0 64 64" aria-hidden="true" className="h-11 w-11 text-white">
+      <path
+        fill="currentColor"
+        d="M14 12v40h18l12-12H26V12H14Zm22 0L24 24h12v16h14l-14 14V12Zm14 0v18H38V12h12Z"
+      />
+    </svg>
+  )
+}
+
+function App() {
+  return (
+    <div className="bg-[var(--color-black)] text-white">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/75 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 md:px-10">
+          <a href="#hero" className="flex items-center gap-3">
+            <LuxoriaMark />
+            <span className="font-rajdhani text-2xl font-bold uppercase tracking-[0.38em] text-white md:text-[1.9rem]">
+              LUXORIA
+            </span>
+          </a>
+
+          <nav className="hidden items-center gap-8 text-sm uppercase tracking-[0.28em] text-[var(--color-muted)] lg:flex">
+            <a href="#services" className="transition-colors duration-300 hover:text-white">Services</a>
+            <a href="#portfolio" className="transition-colors duration-300 hover:text-white">Portfolio</a>
+            <a href="#processus" className="transition-colors duration-300 hover:text-white">Processus</a>
+            <a href="#tarifs" className="transition-colors duration-300 hover:text-white">Tarifs</a>
+            <a href="#contact" className="transition-colors duration-300 hover:text-white">Contact</a>
+          </nav>
+
+          <a href="#contact" className="btn-ghost hidden md:inline-flex">
+            Démarrer un projet
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section id="hero" className="hero-section relative isolate flex min-h-screen items-center overflow-hidden px-6 py-24 md:px-10">
+          <div className="hero-glow" />
+          <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
+            <div className="badge mb-8">
+              <span className="badge-dot" />
+              Agence digitale spécialisée beauté
+            </div>
+
+            <h1 className="font-rajdhani text-[3.4rem] font-bold uppercase leading-[0.9] tracking-[0.03em] text-white md:text-[5.75rem]">
+              <span className="hero-gradient block">Sites web</span>
+              <span className="block">qui subliment</span>
+              <span className="block">votre salon.</span>
+            </h1>
+
+            <p className="mt-8 max-w-3xl text-lg font-light leading-8 text-[var(--color-muted)] md:text-xl">
+              Nous créons des expériences digitales premium pour les salons de coiffure, instituts de beauté et spas.
+              Chaque pixel est pensé pour séduire vos clientes.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="#portfolio" className="btn-primary">
+                Voir nos réalisations
+              </a>
+              <a href="#contact" className="btn-ghost">
+                Obtenir un devis →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/10 bg-black">
+          <div className="stats-grid mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-3">
+            <div className="stat-cell">
+              <span className="stat-value">75%</span>
+              <p>des consommateurs jugent la crédibilité d&apos;une entreprise sur son site web</p>
+            </div>
+            <div className="stat-cell">
+              <span className="stat-value">100%</span>
+              <p>sur mesure</p>
+            </div>
+            <div className="stat-cell">
+              <span className="stat-value">53%</span>
+              <p>des visiteurs quittent un site qui met plus de 3 secondes à charger</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+          <div className="section-intro">
+            <span className="section-kicker">Services</span>
+            <h2 className="section-title">Des sites pensés pour l&apos;esthétique, la confiance et la réservation.</h2>
+            <p className="section-copy">
+              Chaque prestation Luxoria est conçue pour élever votre image, simplifier l&apos;expérience cliente et soutenir votre croissance locale.
+            </p>
+          </div>
+
+          <div className="service-grid mt-14 grid gap-px bg-white/10 md:grid-cols-2 xl:grid-cols-3">
+            {services.map((service) => (
+              <article key={service.title} className="service-card group">
+                <div className="service-topline" />
+                <div className="service-icon">{service.icon}</div>
+                <h3 className="mt-8 font-rajdhani text-3xl font-bold uppercase tracking-[0.08em] text-white">
+                  {service.title}
+                </h3>
+                <p className="mt-4 max-w-sm text-base leading-7 text-[var(--color-muted)]">{service.description}</p>
+                <span className="mt-10 inline-flex text-xl text-white/70 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[var(--color-cyan)]">
+                  ↗
+                </span>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="portfolio" className="portfolio-section bg-[var(--color-navy)]/90 px-6 py-24 md:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="section-intro">
+              <span className="section-kicker">Portfolio</span>
+              <h2 className="section-title">Des directions artistiques sur mesure pour des marques beauté qui veulent marquer les esprits.</h2>
+              <p className="section-copy">
+                Trois univers, trois positionnements, une même exigence : créer des interfaces qui ressemblent à de vraies signatures de marque.
+              </p>
+            </div>
+
+            <div className="portfolio-grid mt-14 grid lg:grid-cols-3">
+              {portfolio.map((item) => (
+                <article key={item.name} className="portfolio-card">
+                  <div className={`browser-frame ${item.mockupClass}`}>
+                    <div className="browser-bar">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+
+                    {item.mockupClass === 'mockup-elara' && (
+                      <div className="mockup-content elara-content">
+                        <div className="mockup-nav elara-nav">
+                          <span className="elara-logo">ÉLARA</span>
+                          <button>Réserver</button>
+                        </div>
+                        <div className="elara-hero">
+                          <p className="elara-kicker">Paris 9ème · Depuis 2014</p>
+                          <h3>
+                            L&apos;art de
+                            <br />
+                            sublimer
+                            <br />
+                            vos cheveux.
+                          </h3>
+                          <div className="elara-actions">
+                            <span>Prendre rendez-vous</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {item.mockupClass === 'mockup-zenta' && (
+                      <div className="mockup-content zenta-content">
+                        <div className="mockup-nav zenta-nav">
+                          <span className="zenta-logo">ZENTA</span>
+                          <div className="zenta-nav-right">
+                            <button>Réserver un soin</button>
+                          </div>
+                        </div>
+                        <div className="zenta-hero">
+                          <p className="zenta-kicker">Institut de beauté &amp; Spa · Bruxelles</p>
+                          <h3>
+                            Prenez soin
+                            <br />
+                            de vous.
+                          </h3>
+                          <span className="zenta-button">Explorer nos rituels</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {item.mockupClass === 'mockup-onyx' && (
+                      <div className="mockup-content onyx-content">
+                        <div className="mockup-nav onyx-nav">
+                          <span className="onyx-logo">ONYX</span>
+                          <button>Book now</button>
+                        </div>
+                        <div className="onyx-hero">
+                          <p className="onyx-kicker">Barbershop · Bruxelles</p>
+                          <h3>
+                            Sharp cuts.
+                            <br />
+                            Bold style.
+                          </h3>
+                          <div className="onyx-actions">
+                            <span>Prendre RDV</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="portfolio-info flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-rajdhani text-3xl font-bold uppercase tracking-[0.08em] text-white">{item.name}</h3>
+                      <p className="mt-2 text-sm uppercase tracking-[0.22em] text-[var(--color-muted)]">{item.type}</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="tag-pill">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="processus" className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+          <div className="section-intro">
+            <span className="section-kicker">Processus</span>
+            <h2 className="section-title">Une méthode claire, élégante et efficace pour lancer votre nouveau site.</h2>
+          </div>
+
+          <div className="timeline mt-16 grid gap-10 md:grid-cols-4">
+            {steps.map((step) => (
+              <article key={step.title} className="timeline-step">
+                <span className="timeline-number">{step.number}</span>
+                <div className="timeline-dot" />
+                <h3 className="mt-6 font-rajdhani text-3xl font-bold uppercase tracking-[0.08em] text-white">{step.title}</h3>
+                <p className="mt-4 max-w-xs text-base leading-7 text-[var(--color-muted)]">{step.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="contact" className="px-6 py-24 md:px-10">
+          <div className="cta-panel mx-auto max-w-5xl rounded-[2rem] border border-white/10 px-8 py-18 text-center md:px-16">
+            <span className="section-kicker justify-center">Contact</span>
+            <h2 className="mt-6 font-rajdhani text-[3rem] font-bold uppercase leading-[0.92] tracking-[0.03em] text-white md:text-[4.375rem]">
+              Prêt à transformer
+              <br />
+              votre présence en ligne ?
+            </h2>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a href="mailto:luxoriaagence@gmail.com" className="btn-primary">
+                Demander une maquette gratuite
+              </a>
+              <a href="tel:+32467679694" className="btn-ghost">
+                Nous appeler →
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="tarifs" className="border-t border-white/10 px-6 py-8 md:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+          <div className="flex items-center gap-3 text-sm text-[var(--color-muted)]">
+            <LuxoriaMark />
+            <span>© 2026 Luxoria Agency</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-[var(--color-muted)]">
+            <a href="#" className="footer-link">Mentions légales</a>
+            <span>•</span>
+            <a href="#" className="footer-link">Confidentialité</a>
+            <span>•</span>
+            <a href="#" className="footer-link">Instagram</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default App
